@@ -1,0 +1,580 @@
+* {
+    
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+}
+
+html{
+    scroll-behavior : smooth;
+    }
+
+body {
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;   
+    background-color: black;
+}
+
+h1 {
+    font-size: 2.8em;
+    color: whitesmoke;
+}
+
+p {
+    color: white;
+    margin: 30px;
+    font-size: 1.1em;
+}
+
+a {
+    text-decoration: none;
+}
+
+li {
+    list-style: none;
+}
+
+/* .boton {
+        width: 140px;
+        padding: 12px 10px;
+        color: black;
+        border-radius: 6px;
+        cursor: pointer;
+        display: inline-block;
+        transition: width ease 0.5s;
+        background-color: gray;
+} */
+
+header {
+    height: 110px;
+    background-color: black;
+    padding: 0 10px;
+}
+
+.ulmenu {
+    display:flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.logo {
+    height: 100px;
+    width: 100px;
+    padding: 10px 10px;
+    background-color: black;
+    opacity: 0.8;
+    transition: all 1s;
+}
+
+#logo:hover {
+    transform: scale(1.1);
+}
+
+i {
+    font-size: 2rem
+}
+
+/* 
+desktop
+@media (max-width: 768px) {
+
+    header {
+    display: flex;
+    flex-direction: column;
+    margin: center;
+    align-items: center;
+    justify-content: center;
+    background-color: white;
+    margin: 0;
+    padding: 0;
+}
+}*/
+
+#burguer {
+    color: #bf0f81;
+    opacity: 0.7;
+}
+
+
+.nav-items {
+    width: 100%;
+}
+
+.item {
+    width: 100%;
+    padding: 1rem 0;
+    display: none;
+}
+
+section {
+    margin: 10px;
+}
+
+#hero {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    flex-direction: column;
+    height: 90vh;
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    )
+    ,url(/img/fotohero.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center center;
+}
+
+#about {
+    background-color: black;
+    display: flex;
+    align-items: center;
+    text-align: center;
+    flex-direction: column;
+    padding-top: 80px;
+    padding-bottom: 80px;
+}
+
+#about .about-container {
+    display: flex;
+    justify-content: center;
+}
+
+#about .img-about {
+    background-image: linear-gradient(
+        0deg,
+        rgba(0, 0, 0, 0.5),
+        rgba(0, 0, 0, 0.5)
+    ), url("/img/Salva.jpg");
+    background-size: cover;
+    background-position: center center;
+    height: 590px;
+    width: 500px;
+}
+
+
+#about .texto-about, h1 {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+}
+
+
+.galeriaimg {
+    width: 100%;
+    padding: 5px 10px
+}
+
+/* MEDIA BURGUER ESP
+
+@media (max-width: 769px) {
+
+.checkburguer {
+    display: block;
+}
+
+
+.ulmenu {
+    position: fixed;
+    width: 100%;
+    height: 100vh;
+    background: black;
+    text-align: center;
+    transition: all .5s;
+}
+
+.item {
+    display: block;
+    margin: 50px 0;
+    line-height: 30px;
+}
+
+.nav-items li a {
+    font-size: 20px;
+}
+
+li a:hover, li a.active {
+    background: none;
+    color: red;
+}
+
+#check:checked ~ ul {
+    left:e;
+}
+
+}
+
+*/
+
+/* MEDIA CELU */
+
+@media (max-width: 770px) {
+
+    
+    .navegacion {
+    display: none;
+}
+
+    /* ABOUT */
+
+    #about .img-about {
+        display: none;
+    }
+
+    .about-container {
+        display: flex;
+        width: 100%;
+    }
+
+    #about {
+        padding: 10px;
+
+    }
+
+    p {
+        font-size: 0.9rem
+    }
+
+
+    /*
+
+    /* CONTACTO */
+
+    #contacto {
+        display: flex;
+        flex-direction: column;
+        margin-top: 50px;
+    }
+
+    .container-contacto {
+        padding: 50px;
+    }
+
+    .cajacontacto {
+        display: inline-block;
+        height: 240px;
+        width: 100%;
+        background-color: black;
+        border: 10px inset rgba(54, 52, 54, 0.65);
+    }
+
+    .cajacontacto a {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+
+    .cajacontacto p {
+        padding: 20px;
+        font-size: 0.9rem;
+        margin: 0 auto;
+        max-width: 120px;
+        color: gray;
+    }
+
+    .cajacontacto a i {
+        color: gray
+    }
+}
+
+/* MEDIA TABLET */
+
+@media (min-width: 480px) {
+
+    .about-container {
+       padding: 20px;
+}
+
+    #about .texto-about {
+        gap: 20px;
+        padding: 20px;
+    }
+
+    #about .texto-about, p {
+        font-size: 1.1rem;
+    }
+
+
+}
+
+
+
+/* MEDIA DESKTOP */
+
+@media (min-width: 769px) {
+    
+    .navmobile {
+    display: none;
+}
+
+    #about {
+        background-color: black;
+    }
+
+    #about .texto-about {
+        display: flex;
+        width: 70%;
+        text-align: initial;
+
+    }
+
+    #about .img-about {
+        margin-left: 20px;
+    }
+
+    
+
+    .nav-items li a {
+        transition: all 0.5s ease
+    }
+
+    .nav-items li a:hover {
+        background: #c4c1c1;
+        opacity: 0,9
+    }
+
+    /*GALERIA GRID*/
+
+    #galeria {
+        background-color: black;
+    }
+
+    .container-galeria {
+       display: flex;
+       flex-direction:initial
+    }
+
+    .container-galeria {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(350px, 1fr));
+        grid-gap: 20px;
+    }
+    
+    .foto {
+        background-color: black;
+        padding: 0px;
+        margin: 0;
+    }
+
+    #foto1 {
+        transition: all 1s;
+}
+
+    #foto1:hover {
+        transform: scale(1.1);
+    }
+
+    #salvablack {
+        transition: all 1s;
+}
+
+    #salvablack:hover {
+        transform: scale(1.1);
+    }
+    
+    .foto > img {
+        width: 100%;
+    }
+
+    /* CONTACTO LPM*/
+
+    .container-contacto {
+        display: flex;
+        margin-top: 70px;
+        height: 240px;
+        width: 100%;
+        background-color: black;
+        border: 10px inset rgba(54, 52, 54, 0.65);
+    }
+
+
+
+    #contacto h1 {
+        margin-top: 70px;
+    }
+
+    .cajacontacto a {
+        display: flex;
+        justify-content: center;
+        margin-top: 30px;
+    }
+    
+    #iconitos {
+        transition: all 1s;
+    }
+
+    #iconitos:hover {
+        transform: scale(1.1);
+    }
+
+    .cajacontacto p {
+        padding: 20px;
+        margin: 0 auto;
+        color: gray;
+    }
+
+    /* NAV MENU */
+    
+    .ulmenu {
+        flex-wrap: nowrap;
+    }
+
+    .nav-items {
+        display: flex;
+        justify-content: flex-end
+    }
+
+    .item {
+        display: flex;
+        width: auto;
+        margin: 10px;
+    }
+
+    li {
+        font-size: 1.1rem;
+    }
+
+    a {
+        color: gray
+    }
+
+    .btn-container {
+        display: none;
+    }
+
+}
+
+footer {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    color: gray;
+    margin-top: 30px;
+}
+
+footer .titulo {
+    width: 15rem;
+}
+
+#logofooter {
+    height: 100px;
+    width: 100px;
+    padding: 10px 10px;
+    background-color: black;
+    opacity: 0.8;
+    transition: all 1s;
+}
+
+#logofooter:hover {
+    transform: scale(1.1);
+}
+
+hr {
+    margin-top: 100px;
+}
+
+footer p {
+    color: gray;
+}
+
+p {
+    color: #d0d0d0;
+}
+
+
+.navmobile {
+    background: black;
+    height: 80px;
+    width: 100%;
+}
+.enlace{
+    position: absolute;
+    padding: 20px 50px;
+}
+.logomobile{
+    height: 50px;
+}
+.navmobile ul{
+    float: right;
+    margin-right: 20px;
+}
+.navmobile ul li{
+    display: inline-block;
+    line-height: 80px;
+    margin: 0 5px;
+}
+.navmobile ul li a{
+    color: gray;
+    font-size: 18px;
+    padding: 7px 13px;
+    border-radius: 3px;
+    text-transform: uppercase;
+}
+
+.checkbtn{
+    font-size: 30px;
+    float: right;
+    line-height: 100px;
+    margin-right: 40px;
+    color: #bf0f81;
+    opacity: 0.7;
+    cursor: pointer;
+    display: none;
+}
+#check{
+    display: none;
+}
+
+@media (max-width: 952px){
+    .enlace{
+        padding-left: 20px;
+    }
+    .navmobile ul li a{
+        font-size: 16px;
+    }
+
+    header {
+        background: black;
+    }
+
+    .navmobile {
+            position: fixed;
+    }
+}
+
+@media (max-width: 858px){
+    .checkbtn{
+        display: block;
+    }
+    .navmobile ul{
+        position: fixed;
+        width: 100%;
+        height: 100vh;
+        background: black;
+        top: 80px;
+        left: -100%;
+        text-align: center;
+        transition: all .5s;
+    }
+    .navmobile ul li{
+        display: block;
+        margin: 50px 0;
+        line-height: 30px;
+    }
+    .navmobile ul li a{
+        font-size: 20px;
+    }
+    li a:hover, li a.active{
+        background: none;
+    }
+    #check:checked ~ ul{
+        left:0;
+    }
+
+}
